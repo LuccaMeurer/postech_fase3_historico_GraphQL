@@ -1,0 +1,22 @@
+type AppointmentHistory {
+    id: ID!
+    appointmentId: ID!
+    patientId: ID!
+    doctorId: ID!
+    createdAt: String!   # ISO-8601 (com -03:00)
+    updatedAt: String    # ISO-8601 ou null
+    status: String
+    notes: String
+}
+
+type Query {
+    appointmentHistoryById(id: ID!): AppointmentHistory
+
+    appointmentHistories(page: Int = 0, size: Int = 20): [AppointmentHistory!]!
+
+    appointmentHistoriesByAppointment(appointmentId: ID!, page: Int = 0, size: Int = 20): [AppointmentHistory!]!
+
+    appointmentHistoriesByPatient(patientId: ID!, page: Int = 0, size: Int = 20): [AppointmentHistory!]!
+
+    appointmentHistoriesByDoctor(doctorId: ID!, page: Int = 0, size: Int = 20): [AppointmentHistory!]!
+}
