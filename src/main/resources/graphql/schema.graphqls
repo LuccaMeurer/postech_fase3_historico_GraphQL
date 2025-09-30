@@ -19,4 +19,6 @@ type Query {
     appointmentHistoriesByPatient(patientId: ID!, page: Int = 0, size: Int = 20): [AppointmentHistory!]!
 
     appointmentHistoriesByDoctor(doctorId: ID!, page: Int = 0, size: Int = 20): [AppointmentHistory!]!
+
+    myAppointments(page: Int!, size: Int!): [AppointmentHistory!]!
 }
