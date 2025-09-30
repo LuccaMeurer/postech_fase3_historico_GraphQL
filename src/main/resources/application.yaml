@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/challenge_fase3?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
-    password: tioerreensti
+    password: senha
     hikari:
       read-only: true
   jpa:
