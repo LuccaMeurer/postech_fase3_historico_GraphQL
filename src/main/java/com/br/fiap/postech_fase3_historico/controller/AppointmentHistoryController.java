@@ -54,4 +54,12 @@ public class AppointmentHistoryController {
     ) {
         return service.findByDoctor(doctorId, page, size);
     }
+
+    @QueryMapping
+    public List<AppointmentHistoryDTO> myAppointments(
+            @Argument int page,
+            @Argument int size
+    ) {
+        return service.findByCurrentPatient(page, size);
+    }
 }
