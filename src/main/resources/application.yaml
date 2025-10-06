@@ -5,19 +5,19 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/challenge_fase3?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: root
-    password: senha
+    password: Senharoot@123
     hikari:
       read-only: true
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     properties:
       hibernate.format_sql: true
       hibernate.jdbc.time_zone: America/Sao_Paulo
   graphql:
     http:
-      path: /graphql
+      path: /history/graphql
     graphiql:
       enabled: true
       path: /graphiql
